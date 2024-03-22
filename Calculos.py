@@ -1,6 +1,6 @@
-from tkinter import messagebox
+from exportacion import * 
 
-class calcular:
+class Trabajor:
     def __init__(self,nombre , apellido,  salario, porcentaje, dias):
         self.nombre = nombre
         self.apellido = apellido
@@ -34,7 +34,7 @@ class calcular:
         vacaciones = (self.salario * self.dias) / 720
         return vacaciones
 
-    def calcularLiquidacion(self):
+    def calcular_Liquidacion(self):
         prima = self.prima()
         cesantias = self.cesantias()
         interes = self.intereses()
@@ -50,32 +50,7 @@ class calcular:
         cesantias = self.cesantias()
         interes = self.intereses()
         vacaciones = self.vacaciones()
-        total = self.calcularLiquidacion()
+        total = self.calcular_Liquidacion()
+        e = exportacion(nombre,apellido,salarioAumento,salarioTrans,prima,cesantias,interes,vacaciones,total)
 
-        nombreExportar = f"Nombre = {nombre}\n"
-        apellidoExportar = f"Apellido = {apellido}\n"
-        primaExportar = f"Prima Empleado= {prima}\n"
-        cesantiasExportar = f"Cesantias causa empleado = {cesantias}\n"
-        interesExportar = f"Intereses causa de las cesantias = {interes}\n"
-        vacacionesExportar = f"Vacaciones a la fecha = {vacaciones}\n"
-        salarioAumentoExportar = f"Salario con aumento = {salarioAumento}\n"
-        salarioTransporteExportar = f"Salario con sub transporte = {salarioTrans}\n"
-        totalExportar = f"Total liquidacion = {total}"
-
-        try:
-            archivo = open("Resultados.txt","w")
-            archivo.write(nombreExportar)
-            archivo.write(apellidoExportar)
-            archivo.write(primaExportar)
-            archivo.write(cesantiasExportar)
-            archivo.write(interesExportar)
-            archivo.write(vacacionesExportar)
-            archivo.write(salarioAumentoExportar)
-            archivo.write(salarioTransporteExportar)
-            archivo.write(totalExportar)
-            messagebox.showinfo('Exportacion','Se exporto correctamente')
-        except Exception as e:
-            print(e)
-
-        finally:
-            archivo.close()
+        e.exportar()

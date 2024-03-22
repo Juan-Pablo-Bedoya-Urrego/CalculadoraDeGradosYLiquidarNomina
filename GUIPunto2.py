@@ -42,7 +42,7 @@ def BTNExportar():
     salario = float(entradaSalario.get())
     aumento = float(entradaAumento.get())
 
-    calcu = calcular(nombre, apellido, salario, aumento, dias_laborados)
+    calcu = Trabajor(nombre, apellido, salario, aumento, dias_laborados)
 
     calcu.exportar()
 
@@ -57,7 +57,7 @@ def BTNcalcular():
 
     global nombreLbl,apellidoLbl,primaLbl,CesantiasLbl,interesLbl,vacacionesLbl,salarioAumentoLbl,salarioTransporteLbl,totalLbl
 
-    calc = calcular(nombre, apellido, salario, aumento, dias_laborados)
+    calc = Trabajor(nombre, apellido, salario, aumento, dias_laborados)
 
     salau, salt = calc.aumento()
 
@@ -106,7 +106,7 @@ def BTNcalcular():
     total = ttk.Label(ventanaLiquidacion, text="Total liquidacion")
     total.grid(row=13, column=0, padx=3, pady=1)
 
-    totalLbl = ttk.Label(ventanaLiquidacion, text=calc.calcularLiquidacion())
+    totalLbl = ttk.Label(ventanaLiquidacion, text=calc.calcular_Liquidacion())
     totalLbl.grid(row=13, column=3, padx=3, pady=1)
 
 

@@ -1,5 +1,5 @@
-Nombre = Juan
-Apellido = Bedoya
+Nombre = Andres
+Apellido = Cadavid
 Prima Empleado= 800000.0
 Cesantias causa empleado = 800000.0
 Intereses causa de las cesantias = 96000.0
