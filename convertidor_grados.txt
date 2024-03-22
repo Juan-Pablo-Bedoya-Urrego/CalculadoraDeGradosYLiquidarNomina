@@ -1,0 +1,3 @@
+Grados ingresados: 6.0
+El equivalente a Fahrenheit: 42.8 
+El equivalente a Celsius: -14.4

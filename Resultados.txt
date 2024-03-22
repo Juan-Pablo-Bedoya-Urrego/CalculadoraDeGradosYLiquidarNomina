@@ -1,0 +1,9 @@
+Nombre = Juan
+Apellido = Bedoya
+Prima Empleado= 800000.0
+Cesantias causa empleado = 800000.0
+Intereses causa de las cesantias = 96000.0
+Vacaciones a la fecha = 400000.0
+Salario con aumento = 880000.0
+Salario con sub transporte = 984606.0
+Total liquidacion = 2096000.0
