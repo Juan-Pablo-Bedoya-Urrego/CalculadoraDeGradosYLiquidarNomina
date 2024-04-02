@@ -117,13 +117,12 @@ def VentanaCalculo():
 
     menuP = Menu(ventanaLiquidacion)
     submenu_archivo = Menu(menuP,tearoff=0)
-    submenu_archivo.add_command(label='Archivo', command=archivo)
 
     menuP.add_cascade(menu=submenu_archivo,label='Archivo')
     submenu_archivo.add_command(label='salir',command=salir)
 
     submenu_ayuda = Menu(menuP,tearoff=0)
-    submenu_ayuda.add_command(label="Acerca del Proyecto", command=integrantes)
+    submenu_ayuda.add_command(label="Nombre de los integrantes", command=integrantes)
 
     menuP.add_cascade(menu=submenu_ayuda, label='Acerca del proyecto')
 
